@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="img/logo.jpg" width="200px">
+    <img src="img/logo.jpg" width="100px">
 </p>
 
 <p align="center"><span style="font-size:50px">semSDN - 基于本体的SDN网络管理系统</span>
@@ -27,4 +27,3 @@
 ![](./img/1.png)
 ![](./img/2.png)
 ![](./img/3.png)
->>>>>>> first commit
