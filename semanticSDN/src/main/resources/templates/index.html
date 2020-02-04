@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<!-- saved from url=(0014)about:internet -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="render" content="webkit|ie-comp|ie-stand" />
+
+    <!-- 禁止页面缓存 -->
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>index</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!--[if (gte IE 9)|(! IE)]><!-->
+    <link rel="stylesheet" href="static/vendors/pace/themes/blue/pace-theme-barber-shop.css" />
+    <script data-pace-options='{ "ajax": true, "document": true, "eventLag": false, "elements": false }' src="static/vendors/pace/pace.min.js"></script>
+    <!--<![endif]-->
+
+    <!-- 公共样式区 start -->
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/index/bootstrap.min.css" />
+    <link rel="stylesheet" href="/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendors/animate/animate.min.css">
+
+    <link rel="stylesheet" href="/styles/common.css">
+    <!-- 公共样式区 end -->
+
+    <!-- 插件样式区 start -->
+    <link rel="stylesheet" href="/vendors/layui/css/layui.css">
+    <link rel="stylesheet" href="/vendors/layer/theme/default/layer.css">
+    <link rel="stylesheet" href="/vendors/metismenu/metisMenu.min.css">
+    <!-- 插件样式区 end -->
+
+    <!-- 自定义样式区 start -->
+    <link rel="stylesheet" href="/styles/index/style.min.css">
+    <link rel="stylesheet" href="/styles/pages/index.css">
+    <!-- 自定义样式区 end -->
+
+    <!-- 内联样式区 start -->
+    <style></style>
+    <!-- 内联样式区 end -->
+
+</head>
+
+<!-- <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden"> -->
+
+<body class="fixed-sidebar full-height-layout gray-bg fixed-nav" style="overflow:hidden">
+    <div id="wrapper">
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close"><i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a class="J_menuItem" href="sdn-controller.html" data-index="0">
+                            <i class="fa fa-gamepad"></i>
+                            <span class="nav-label">SDN 控制器</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="network-topology.html">
+                            <i class="fa fa-random"></i>
+                            <span class="nav-label">网络拓扑</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="switch.html">
+                            <i class="fa fa-sitemap"></i>
+                            <span class="nav-label">交换机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="link.html">
+                            <i class="fa fa-link"></i>
+                            <span class="nav-label">链路</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="host.html">
+                            <i class="fa fa-desktop"></i>
+                            <span class="nav-label">主机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-line-chart"></i>
+                            <span class="nav-label">性能检测</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="link-performance.html">
+                                    <i class="fa fa-area-chart"></i>
+                                    <span class="nav-label">链路性能</span></a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="port-performance.html"><i class="fa fa-area-chart"></i>
+                    			<span class="nav-label">端口性能</span></a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="sparql.html"><i class="fa fa-area-chart"></i>
+                    			<span class="nav-label">网络资源查询</span></a>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
+                        <h2 class="navbar-minimalize minimalize-styl-2 custom-top-title hidden-xs">网络感知与描述系统</h2>
+                    </div>
+                </nav>
+            </div>
+            <div class="row content-tabs">
+                <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i></button>
+                <nav class="page-tabs J_menuTabs">
+                    <div class="page-tabs-content">
+                        <a href="javascript:;" class="active J_menuTab" data-id="network-topology.html">网络拓扑</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="network-topology.html" frameborder="0" data-id="network-topology.html" seamless></iframe>
+            </div>
+        </div>
+
+    <!--[if (gte IE 9)|(! IE)]><!-->
+    <script src="/vendors/jquery-3.3.1.min.js"></script>
+    <script src="/vendors/jquery-migrate-1.4.1.min.js"></script>
+    <script src="/vendors/jquery-migrate-3.0.0.min.js"></script>
+    <!--<![endif]-->
+
+    <script src="/vendors/babel-polyfill/browser.js"></script>
+    <script src="/javascripts/request-animation-frame.js"></script>
+    <script src="/vendors/vue/vue.min.js"></script>
+    <script src="/vendors/lodash/lodash.js"></script>
+    <script src="/vendors/rxjs/rxjs.umd.min.js"></script>
+    <script src="/vendors/moment/moment.min.js"></script>
+
+    <script src="/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 公共脚本区 end -->
+
+    <!-- 插件脚本区 start -->
+    <script src="/vendors/layui/layui.js"></script>
+    <script src="/vendors/layer/layer.js"></script>
+    <script src="/vendors/metismenu/metisMenu.min.js"></script>
+    <script src="/vendors/slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- 插件脚本区 end -->
+
+    <!-- 自定义脚本区 start -->
+    <script src="/javascripts/hplus.min.js"></script>
+    <script src="/javascripts/contabs.min.js"></script>
+
+    <script src="/javascripts/pages/index.js"></script>
+    <!-- 自定义脚本区 end -->
+
+
+</body>
+
+</html>

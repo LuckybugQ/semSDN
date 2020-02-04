@@ -1,0 +1,1172 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#"
+     xml:base="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#connect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#connect">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#consist_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#consist_of">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#contains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#contains"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#control -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#control">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Controller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Switch"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#bandwidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#bandwidth">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#common_properties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#common_properties"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#connect_sw_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#connect_sw_id">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#host_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#connect_sw_port -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#connect_sw_port">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#host_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#connectedSince -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#connectedSince">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#switch_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#direction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#direction">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#drop_rate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#drop_rate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#dst_port -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#dst_port">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#dst_swid -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#dst_swid">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#host_properties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#host_properties"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#ip_address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#ip_address">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#common_properties"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#jitter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#jitter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#lastSeen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#lastSeen">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#host_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#latency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#latency">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#mac_address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#mac_address">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#common_properties"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#openFlowVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#openFlowVersion">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#switch_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#port_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#port_id">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#src_port -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#src_port">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#src_swid -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#src_swid">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#switch_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#switch_id">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#switch_properties"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Switch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#switch_properties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#switch_properties"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#type">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#utilization -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#utilization">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#link_properties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Component"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Controller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Controller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Devices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Devices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Devices"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Floodlight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Floodlight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Controller"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Flowtable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Flowtable"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Function"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Devices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#OVS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#OVS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Switch"/>
+        <rdfs:comment>Open vswitch</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Switch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Switch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Devices"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L032 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L032">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#053"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#072"/>
+        <direction>bidirectional</direction>
+        <dst_port>2</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:07</dst_swid>
+        <latency>20</latency>
+        <src_port>3</src_port>
+        <src_swid>00:00:00:00:00:00:00:05</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L1031 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L1031">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#073"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#091"/>
+        <bandwidth>35</bandwidth>
+        <direction>bidirectional</direction>
+        <drop_rate>null</drop_rate>
+        <dst_port>1</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:09</dst_swid>
+        <latency>34</latency>
+        <src_port>3</src_port>
+        <src_swid>00:00:00:00:00:00:00:07</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L1122 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L1122">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#052"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#062"/>
+        <bandwidth>28</bandwidth>
+        <direction>bidirectional</direction>
+        <drop_rate>null</drop_rate>
+        <dst_port>2</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:06</dst_swid>
+        <latency>41</latency>
+        <src_port>2</src_port>
+        <src_swid>00:00:00:00:00:00:00:05</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L1221 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L1221">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#042"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#081"/>
+        <direction>bidirectional</direction>
+        <drop_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</drop_rate>
+        <dst_port>1</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:08</dst_swid>
+        <latency>35</latency>
+        <src_port>2</src_port>
+        <src_swid>00:00:00:00:00:00:00:04</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L141 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L141">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#034"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#061"/>
+        <direction>bidirectional</direction>
+        <drop_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</drop_rate>
+        <dst_port>1</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:06</dst_swid>
+        <latency>6</latency>
+        <src_port>4</src_port>
+        <src_swid>00:00:00:00:00:00:00:03</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L221 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L221">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#032"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#041"/>
+        <direction>bidirectional</direction>
+        <drop_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</drop_rate>
+        <dst_port>1</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:04</dst_swid>
+        <latency>68</latency>
+        <src_port>2</src_port>
+        <src_swid>00:00:00:00:00:00:00:03</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L342 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L342">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#054"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#092"/>
+        <direction>bidirectional</direction>
+        <drop_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</drop_rate>
+        <dst_port>2</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:09</dst_swid>
+        <latency>11</latency>
+        <src_port>4</src_port>
+        <src_swid>00:00:00:00:00:00:00:05</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L411 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L411">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#011"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#021"/>
+        <direction>bidirectional</direction>
+        <drop_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</drop_rate>
+        <dst_port>1</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:02</dst_swid>
+        <latency>72</latency>
+        <src_port>1</src_port>
+        <src_swid>00:00:00:00:00:00:00:01</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L532 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L532">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#033"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#082"/>
+        <direction>bidirectional</direction>
+        <drop_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</drop_rate>
+        <dst_port>2</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:08</dst_swid>
+        <latency>20</latency>
+        <src_port>3</src_port>
+        <src_swid>00:00:00:00:00:00:00:03</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L631 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L631">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#023"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#051"/>
+        <direction>bidirectional</direction>
+        <drop_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</drop_rate>
+        <dst_port>1</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:05</dst_swid>
+        <latency>0</latency>
+        <src_port>3</src_port>
+        <src_swid>00:00:00:00:00:00:00:02</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L721 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L721">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#022"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#031"/>
+        <direction>bidirectional</direction>
+        <drop_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</drop_rate>
+        <dst_port>1</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:03</dst_swid>
+        <latency>0</latency>
+        <src_port>2</src_port>
+        <src_swid>00:00:00:00:00:00:00:02</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L843 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L843">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#074"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#083"/>
+        <bandwidth>22</bandwidth>
+        <direction>bidirectional</direction>
+        <drop_rate>null</drop_rate>
+        <dst_port>3</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:08</dst_swid>
+        <latency>48</latency>
+        <src_port>4</src_port>
+        <src_swid>00:00:00:00:00:00:00:07</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L951 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#L951">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Link"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#035"/>
+        <connect rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#071"/>
+        <direction>bidirectional</direction>
+        <drop_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</drop_rate>
+        <dst_port>1</dst_port>
+        <dst_swid>00:00:00:00:00:00:00:07</dst_swid>
+        <latency>4</latency>
+        <src_port>5</src_port>
+        <src_swid>00:00:00:00:00:00:00:03</src_swid>
+        <type>internal</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#OVS"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#011"/>
+        <connectedSince>1555416772610</connectedSince>
+        <ip_address>/192.168.50.113:58864</ip_address>
+        <openFlowVersion>OF_13</openFlowVersion>
+        <switch_id>00:00:00:00:00:00:00:01</switch_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#OVS"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#021"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#022"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#023"/>
+        <connectedSince>1555416772610</connectedSince>
+        <ip_address>/192.168.50.113:58862</ip_address>
+        <openFlowVersion>OF_13</openFlowVersion>
+        <switch_id>00:00:00:00:00:00:00:02</switch_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#OVS"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#031"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#032"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#033"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#034"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#035"/>
+        <connectedSince>1555416772610</connectedSince>
+        <ip_address>/192.168.50.113:58867</ip_address>
+        <openFlowVersion>OF_13</openFlowVersion>
+        <switch_id>00:00:00:00:00:00:00:03</switch_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#OVS"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#041"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#042"/>
+        <connectedSince>1555416772610</connectedSince>
+        <ip_address>/192.168.50.113:58866</ip_address>
+        <openFlowVersion>OF_13</openFlowVersion>
+        <switch_id>00:00:00:00:00:00:00:04</switch_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#OVS"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#051"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#052"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#053"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#054"/>
+        <connectedSince>1555416772610</connectedSince>
+        <ip_address>/192.168.50.113:58861</ip_address>
+        <openFlowVersion>OF_13</openFlowVersion>
+        <switch_id>00:00:00:00:00:00:00:05</switch_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:06">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#OVS"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#061"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#062"/>
+        <connectedSince>1555416772610</connectedSince>
+        <ip_address>/192.168.50.113:58869</ip_address>
+        <openFlowVersion>OF_13</openFlowVersion>
+        <switch_id>00:00:00:00:00:00:00:06</switch_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:07 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:07">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#OVS"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#071"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#072"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#073"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#074"/>
+        <connectedSince>1555416772610</connectedSince>
+        <ip_address>/192.168.50.113:58868</ip_address>
+        <openFlowVersion>OF_13</openFlowVersion>
+        <switch_id>00:00:00:00:00:00:00:07</switch_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#OVS"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#081"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#082"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#083"/>
+        <connectedSince>1555416772610</connectedSince>
+        <ip_address>/192.168.50.113:58863</ip_address>
+        <openFlowVersion>OF_13</openFlowVersion>
+        <switch_id>00:00:00:00:00:00:00:08</switch_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#00:00:00:00:00:00:00:09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#OVS"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#091"/>
+        <consist_of rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#092"/>
+        <connectedSince>1555416772610</connectedSince>
+        <ip_address>/192.168.50.113:58865</ip_address>
+        <openFlowVersion>OF_13</openFlowVersion>
+        <switch_id>00:00:00:00:00:00:00:09</switch_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>1</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#021 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#021">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>1</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>2</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#023 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#023">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>3</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#031 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#031">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>1</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#032 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#032">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>2</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#033 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#033">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>3</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#034 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#034">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>4</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#035 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#035">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>5</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#041 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#041">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>1</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#042 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#042">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>2</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#051 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#051">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>1</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#052 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#052">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>2</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#053 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#053">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>3</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#054 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#054">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>4</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#061 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#061">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>1</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#062 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#062">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>2</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#071 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#071">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>1</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#072 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#072">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>2</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#073 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#073">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>3</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#074 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#074">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>4</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#081 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#081">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>1</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#082 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#082">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>2</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#083 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#083">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>3</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#091 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#091">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>1</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#092 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#092">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Port"/>
+        <port_id>2</port_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:01</connect_sw_id>
+        <connect_sw_port>2</connect_sw_port>
+        <ip_address>10.0.0.16</ip_address>
+        <lastSeen>1555416911415</lastSeen>
+        <mac_address>8a:2f:8f:79:5f:5a</mac_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:02</connect_sw_id>
+        <connect_sw_port>4</connect_sw_port>
+        <ip_address>10.0.0.17</ip_address>
+        <lastSeen>1555416911415</lastSeen>
+        <mac_address>0e:80:f3:1a:84:68</mac_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:02</connect_sw_id>
+        <connect_sw_port>5</connect_sw_port>
+        <ip_address>10.0.0.18</ip_address>
+        <lastSeen>1555416924602</lastSeen>
+        <mac_address>92:6b:74:48:4c:e3</mac_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:03</connect_sw_id>
+        <connect_sw_port>6</connect_sw_port>
+        <ip_address>10.0.0.19</ip_address>
+        <lastSeen>1555416919531</lastSeen>
+        <mac_address>f6:58:e9:7c:ff:5d</mac_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:04</connect_sw_id>
+        <connect_sw_port>3</connect_sw_port>
+        <ip_address>10.0.0.20</ip_address>
+        <lastSeen>1555416904364</lastSeen>
+        <mac_address>6e:d8:33:cc:ff:41</mac_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:04</connect_sw_id>
+        <connect_sw_port>4</connect_sw_port>
+        <ip_address>10.0.0.21</ip_address>
+        <lastSeen>1555416911415</lastSeen>
+        <mac_address>92:31:6d:89:c6:4a</mac_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:08</connect_sw_id>
+        <connect_sw_port>4</connect_sw_port>
+        <ip_address>10.0.0.22</ip_address>
+        <lastSeen>1555416918531</lastSeen>
+        <mac_address>9e:fb:07:3d:08:5b</mac_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:07</connect_sw_id>
+        <connect_sw_port>5</connect_sw_port>
+        <ip_address>10.0.0.23</ip_address>
+        <lastSeen>1555416901314</lastSeen>
+        <mac_address>ee:d0:36:e9:12:50</mac_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:09</connect_sw_id>
+        <connect_sw_port>3</connect_sw_port>
+        <ip_address>10.0.0.24</ip_address>
+        <lastSeen>1555416918531</lastSeen>
+        <mac_address>f6:23:e7:d9:c4:ac</mac_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:09</connect_sw_id>
+        <connect_sw_port>4</connect_sw_port>
+        <ip_address>10.0.0.25</ip_address>
+        <lastSeen>1555416924602</lastSeen>
+        <mac_address>86:a5:1c:7f:82:36</mac_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.26">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:05</connect_sw_id>
+        <connect_sw_port>5</connect_sw_port>
+        <ip_address>10.0.0.26</ip_address>
+        <lastSeen>1555416902346</lastSeen>
+        <mac_address>82:4e:97:a4:f0:41</mac_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:05</connect_sw_id>
+        <connect_sw_port>6</connect_sw_port>
+        <ip_address>10.0.0.27</ip_address>
+        <lastSeen>1555416922572</lastSeen>
+        <mac_address>ce:fb:c5:f9:c3:be</mac_address>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#10.0.0.28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#Host"/>
+        <connect_sw_id>00:00:00:00:00:00:00:06</connect_sw_id>
+        <connect_sw_port>3</connect_sw_port>
+        <ip_address>10.0.0.28</ip_address>
+        <lastSeen>1555416920563</lastSeen>
+        <mac_address>16:86:d0:98:b6:9b</mac_address>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

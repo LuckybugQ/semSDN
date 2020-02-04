@@ -1,0 +1,48 @@
+// 使用appearance改变webkit浏览器的默认外观
+input,
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+// 禁用select默认箭头
+select::-ms-expand {
+  display: none;
+}
+
+// 禁用radio和checkbox默认样式
+input[type=radio]::-ms-check,
+input[type=checkbox]::-ms-check {
+  display: none;
+}
+
+// 禁用pc端表单输入框默认清除按钮
+input[type=text]::-ms-clear,
+input[type=tel]::-ms-clear,
+input[type=number]::-ms-clear {
+  display: none;
+}
+
+select {
+  /*去除外边框*/
+  border: none;
+  /*适应safari浏览器内容不跑偏*/
+  line-height: 1;
+  width: 100%;
+  /*将默认的select选择框样式清除*/
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  /*在选择框的最右侧中间显示小箭头图片*/
+  // background url("../../img/my/btn_pulldown.png") no-repeat scroll right center / 0.9rem 0.9rem transparent
+  // background-size 0.9rem 0.9rem
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 14px;
+  font-size: 1.4rem;
+  color: #666;
+  /*去除选中时样式*/
+  outline: none;
+
+  /*去除点击一闪而过的灰色背景*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

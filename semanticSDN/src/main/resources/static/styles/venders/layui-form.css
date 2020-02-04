@@ -1,0 +1,11 @@
+.layui-form-label {
+    width: auto;
+}
+
+.layui-form-select .layui-input {
+    color: #337ab7;
+}
+
+.layui-form-select dl dd {
+    color: #337ab7;
+}

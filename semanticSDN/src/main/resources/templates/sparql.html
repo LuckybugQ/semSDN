@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="render" content="webkit|ie-comp|ie-stand" />
+
+    <!-- 禁止页面缓存 -->
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <title>网络资源查询</title>
+    <!-- sprql.html的样式 -->
+    <style type="text/css">
+    	*{
+			padding: 0;
+			margin: 0;
+		}
+		.header{
+			height: 50px;
+			background-color: #007BB6;
+		}
+		.sparqlTitle{
+			color: white;
+			font-family: "微软雅黑";
+			font-weight: normal;
+			font-size: 23px;
+			line-height: 50px;
+			padding-left: 20px;
+		}
+		.tarea{
+			width: 100%;
+			height: 200px;
+			resize: none;
+			border-color: #E6E6E6;
+		}
+		#btn{
+			display: block;
+			margin: 0 auto;
+			width: 100px;
+			height: 40px;
+		}
+		
+		table{
+			width: 100%;
+			margin: 0 auto;
+			border-collapse: collapse;
+			margin-top:5px;
+		}
+		
+		td , th{
+			border: 1px solid #007BB6;
+			text-align:center;
+			height:30px;
+		}
+
+		
+		tr:nth-child(even){
+			background-color: #bfa;
+		}
+		
+		tr:hover{
+			background-color: #ff0;
+		}
+    </style>
+
+   
+</head>
+
+<body>
+	
+	<div class="header">
+		<h3 class='sparqlTitle'>SPARQL查询网络资源</h3>
+	</div>
+	<textarea class="tarea" id="txt" placeholder="请输入查询资源的SPARQL语句，注意：不要加PREFIX前缀"></textarea>
+ 	<button id="btn">提交</button>
+ 	<div>
+	 	<table id="tab">
+	 		
+	 	</table>
+	 </div>
+    <script type="text/javascript">
+	    var btn = document.getElementById("btn");
+		var txt = document.getElementById("txt");
+		// 提交按钮的单击响应函数
+		btn.onclick = function(){
+			// 获取<textarea></textarea>中输入的内容
+			var txtContent = txt.value;
+			// 将获取的内容按行切割分数组
+			var colLine = txtContent.split('\n');
+			// 传入resolve()函数得到查找的列
+			var colTitle = resolve(colLine);
+			// 构造请求的http get请求的url，sparql为封装的参数，由于sparql携带内容有特殊字符，需要进行encodeURI()函数编码替换特殊字符
+			var url = "http://127.0.0.1:8080/sparqlInfo?sparql=" + encodeURI(txtContent, "UTF-8");
+			// 构造http请求对象
+			var req = new XMLHttpRequest();
+			// http答复的处理函数
+			req.onreadystatechange = function handle(){
+				if(req.readyState == 4) {
+					if(req.status == 200) {
+						
+						// http的回复内容，为json格式，key为列名，value为查询到的值
+						var resp = req.responseText;
+						var tab = document.getElementById("tab");
+						// 解析json串
+						var respJson = JSON.parse(resp);
+						console.log(respJson);
+						
+						// ----------以下部分的内容为使用js代码，向页面中插入html代码构造表格-----------------
+						var insertHTML = "";
+						var thtd = '<tr>';
+						for(var i = 0; i < colTitle.length; i++) {
+							thtd += '<td>' + colTitle[i] + '</td>';
+						}
+						thtd += '</tr>';
+						insertHTML += thtd;
+						for(var j = 0; j < respJson.length; j++) {
+							var tempStr = '<tr>';
+							for(var t = 0; t < colTitle.length; t++) {
+								var title = colTitle[t];
+								console.log(respJson[j].title);
+								tempStr += '<td>' + respJson[j][title] + '</td>';
+							}
+							tempStr += '</tr>';
+							console.log(tempStr);
+							insertHTML += tempStr;
+						}
+						tab.innerHTML = insertHTML;
+						// ----------以上部分的内容为使用js代码，向页面中插入html代码构造表格-----------------
+						
+					}
+				}
+			};
+			// http请求的准备与发送
+			req.open("GET", url, true);
+			req.send();
+		};
+		
+		// 从输入的文本当中解析出表格的列名
+		function resolve(str) {
+			var temp;
+			for(var i = 0; i < str.length; i++) {
+				if(str[i].toLowerCase().indexOf('select') != -1) {
+					temp = str[i].split(/\s+/).slice(1);
+				}
+			}
+			var colArr = [];
+			for(var j = 0; j < temp.length; j++) {
+				colArr.push(temp[j].slice(1));
+			}
+			return colArr;
+		}
+    </script>
+
+</body>
+
+</html>

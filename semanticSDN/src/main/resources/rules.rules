@@ -1,0 +1,5 @@
+@prefix sdn: <http://www.semanticweb.org/ssj/ontologies/2018/10/semsdn#>.@include <RDFS>.@include <OWL>.
+[rule1: (?h rdf:type sdn:Host) (?h rdf:type sdn:Port) (?s sdn:connect ?p) -> (?p sdn:connect ?s)]
+[rule2: (?h rdf:type sdn:Host) (?h rdf:type sdn:Port) (?p sdn:connect ?s) -> (?s sdn:connect ?p)]
+[rule3: (?link rdf:type sdn:Link) (?port rdf:type sdn:Port) (?link sdn:connect ?port) -> (?port sdn:connect ?link)]
+[rule4: (?link rdf:type sdn:Link) (?port rdf:type sdn:Port) (?port sdn:connect ?link) -> (?link sdn:connect ?port)]

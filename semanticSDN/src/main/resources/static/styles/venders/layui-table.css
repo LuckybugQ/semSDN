@@ -1,0 +1,9 @@
+.layui-table,
+.layui-table-view {
+  margin: 0;
+}
+
+.layui-table-page {
+  padding-right: 32px;
+  text-align: right;
+}
